@@ -110,8 +110,20 @@ public class WebSecurityConfig {
                                     String.format("%s/healthcheck/**", apiPrefix)).permitAll()
 
 
-                            .anyRequest().authenticated();
-                            //.anyRequest().permitAll();
+                            .requestMatchers(GET,
+                                    String.format("%s/staff**", apiPrefix)).permitAll()
+
+                            .requestMatchers(POST,
+                                    String.format("%s/staff/**", apiPrefix)).hasAnyRole(Role.ADMIN)
+
+                            .requestMatchers(PUT,
+                                    String.format("%s/staff/**", apiPrefix)).hasAnyRole(Role.ADMIN)
+
+                            .requestMatchers(DELETE,
+                                    String.format("%s/staff/**", apiPrefix)).hasAnyRole(Role.ADMIN)
+
+                             .anyRequest().authenticated();
+                        //        .anyRequest().permitAll();
 
                 })
                 .csrf(AbstractHttpConfigurer::disable);

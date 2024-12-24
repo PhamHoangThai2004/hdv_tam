@@ -10,6 +10,9 @@ import { CategoryAdminComponent } from './category/category.admin.component';
 import { DetailProductAdminComponent } from './detail-product/detail.product.admin.component';
 import { CommonModule } from '@angular/common';
 import { NewProductAdminComponent } from "./new-product/new.product.admin.component";
+
+import { UserAdminComponent } from './user/user.admin.component';
+import { DetailUserAdminComponent } from './details-user/detail.user.admin.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,6 +24,9 @@ import { FormsModule } from '@angular/forms';
     ProductAdminComponent,
     NewProductAdminComponent,
     CategoryAdminComponent,
+    DetailUserAdminComponent,
+    ProductAdminComponent,
+    UserAdminComponent,
   ],
   imports: [
     AdminRoutingModule, // import routes,

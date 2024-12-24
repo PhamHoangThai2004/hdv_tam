@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { Product } from '../models/product';
 import { ProductDTO } from '../dtos/product/product.dto';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -28,6 +29,7 @@ export class ProductService {
   }
 
   getProductsByIds(productIds: number[]): Observable<Product[]> {
+  
     debugger
     const params = new HttpParams().set('ids', productIds.join(',')); 
     return this.http.get<Product[]>(`${this.apiGetProducts}/by-ids`, { params });
@@ -46,4 +48,5 @@ export class ProductService {
     const url = `${environment.apiBaseUrl}/products/${productID}`;
     return this.http.delete(url, { responseType: 'text' });
   }
+
 }

@@ -106,4 +106,5 @@ export class ProductAdminComponent implements OnInit{
     this.router.navigate(['/admin/products/new']);
   }
   
+
 }
