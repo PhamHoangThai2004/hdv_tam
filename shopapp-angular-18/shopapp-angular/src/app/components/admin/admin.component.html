@@ -16,6 +16,9 @@
           <li class="nav-item">
             <a class="nav-link" (click)="showAdminComponent('categories')">
               <i class="fab fa-canadian-maple-leaf icon"></i>Categories
+            </a> <!-- Đóng thẻ <a> cho mục Categories -->
+          </li>
+          <li class="nav-item">
             <a class="nav-link" (click)="showAdminComponent('users')">
               <i class="fab fa-canadian-maple-leaf icon"></i>Users
             </a>
@@ -29,7 +32,6 @@
       </div>
     </nav>
     <div class="col-md-10 col-lg-10 overflow-auto">
-
       <router-outlet></router-outlet>
     </div>
   </div>

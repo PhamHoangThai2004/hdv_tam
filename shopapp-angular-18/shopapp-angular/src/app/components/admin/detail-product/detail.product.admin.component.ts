@@ -14,7 +14,7 @@ import { ProductDTO } from 'src/app/dtos/product/product.dto';
 @Component({
   selector: 'app-detail-product-admin',
   templateUrl: './detail.product.admin.component.html',
-  styleUrls: ['./detail.product.admin.component.scss']
+  // styleUrls: ['./detail.product.admin.component.scss']
 })
 
 export class DetailProductAdminComponent implements OnInit{
